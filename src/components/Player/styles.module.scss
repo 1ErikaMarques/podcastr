@@ -1,0 +1,97 @@
+.playerContainer {
+  padding: 3rem 4rem; //3rem vertical e 4rem horizontal
+  width: 26.5rem;
+  height: 100vh; //100% da altura da janela de visualizaçao
+
+  background: var(--purple-500);
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1rem; //todo elento que esta dentro to header tera um espaçamento entre eles de 16px
+  }
+
+  strong {
+    font-family: Lexend, sans-serif;
+    font-weight: 600;
+  }
+
+  footer {
+    align-self: stretch; // ocupar a largura toda do footer
+    &.empty {
+      // quando no footer tiver a class empty add essa opacity
+      opacity: 0.5;
+    }
+  }
+}
+
+.emptyPlayer {
+  width: 100%;
+  height: 20rem;
+  border: 1.5px dashed var(--purple-300);
+  border-radius: 1.5rem;
+  background: linear-gradient(
+    143.8deg,
+    rgba(145, 100, 250, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  padding: 4rem;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+
+  span {
+    display: inline-block;
+    width: 4rem;
+    text-align: center;
+  }
+
+  .slider {
+    flex: 1;
+
+    .emptySlider {
+      width: 100%;
+      height: 4px;
+      background: var(--purple-300);
+      border-radius: 2px;
+    }
+  }
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+  gap: 1.5rem;
+
+  button{
+    background: transparent;
+    border: 0;
+    font-size: 0; // zeramos a font, quando temos um botao que so tem uma img dentro essa img vai ficar centralizada,pq por padrao ele vai tentar alinhar a img de acordo com o font size do botao,entao se ficar com 0 vai ficar centralizado
+  
+    &.playButton{// e se o button tiver a class css playButton(e o botao de play)...
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1rem;
+      background: var(--purple-400);
+    }
+  }
+
+}
